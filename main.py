@@ -19,12 +19,12 @@ def loadData(sysArgs):
 def createOutFile(wLinReg,wSGD,outPath):
     outData=open(outPath,"w+")
     for component in wLinReg:
-        rounded=round(component,3)
+        rounded=round(component,4)
         outData.write(str(rounded)+"\n")
     
     outData.write("\n")
     for component in wSGD:
-        rounded=round(component,3)
+        rounded=round(component,4)
         outData.write(str(rounded)+"\n")
     
     print(">> .out file created at {}\n".format(outPath))
